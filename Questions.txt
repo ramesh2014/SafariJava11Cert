@@ -25,3 +25,85 @@ E) for (int x = 0; x < 10; x++)
      ;
     int x;
 
+----------------------------
+Which are legal:
+
+A) class X {
+  var x = 99;
+}
+
+B) void doStuff(var x) { }
+
+C) void doStuff() {
+  var x;
+  x = 100;
+}
+
+D) void doStuff() {
+  var x = 100;
+}
+
+E) void doStuff() {
+  var x = { 1, 2, 3 };
+}
+
+----------------------------
+Which are legal:
+
+A) void doStuff() {
+  var x = new int[]{ 1, 2, 3 };
+}
+
+B) void doStuff() {
+  var [] x = new int[]{ 1, 2, 3 };
+}
+
+C) void doStuff() {
+  var x = 99;
+  x = "Hello";
+}
+
+D) void doStuff() {
+  var x = 1, y = 2;
+}
+
+E)
+void doStuff() {
+  try {
+   // stuff happens 
+   } catch (var ex) {
+   }
+}
+----------------------------
+Which print "true"
+A) String s = "Hello";
+   String t = "He";
+   t += "llo";
+   sout(s == t);
+   
+B) String s = "Hello";
+   String t = "He";
+   t += "llo";
+   sout(s.equals(t));
+   
+C) StringBuilder s = new StringBuilder("Hello");
+   StringBuilder t = new StringBuilder("He");
+   t.append("llo");
+   sout(s.equals(t));
+   
+D) List<String> ls = List.of("Fred", "Jim");
+   List<String> ls2 = new ArrayList<>(ls);
+   sout(ls.equals(ls2));
+   
+E) LocalDate ld = LocalDate.of(2021, 3, 29);
+   LocalDate ld2 = LocalDate.of(2021, 3, 29);
+   sout(ld.equals(ld2));
+   
+
+
+
+
+
+
+
+
