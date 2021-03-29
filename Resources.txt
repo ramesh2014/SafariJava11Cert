@@ -2,9 +2,9 @@ Resources
 ---------
 
 Quiztool:
-http://ec2-54-189-172-181.us-west-2.compute.amazonaws.com:8080/quiz-tool/
+ - http://ec2-54-189-172-181.us-west-2.compute.amazonaws.com:8080/quiz-tool/
 Github repo (remember this will vanish in two weeks)
-https://github.com/SimonHGR/SafariJava11Cert
+ - https://github.com/SimonHGR/SafariJava11Cert
 
 Recording
  - about 24 hours
@@ -12,7 +12,7 @@ Recording
  - follow the same link you came here with
 
 Pre-recorded video (~20 hours)
- - OCA Java 8 only (I'm working on the update which will be in sections) but all 8 is relevant for 11!
+ - OCA Java 8 only (I'm working on updates) but all 8 is relevant for 11!
  - Slower, more complete
  - https://learning.oreilly.com/videos/oca-java-se/9780134427201
  - Other videos:
@@ -40,3 +40,7 @@ Java 11 API documentation:
  - https://docs.oracle.com/en/java/javase/11/docs/api/index.html
 Java tutorial (Java 8 only, sadly, but excellent for all core material)
  - https://docs.oracle.com/javase/tutorial/
+ 
+Java Magazine, with regular quiz questions:
+ - https://blogs.oracle.com/javamagazine/
+ 
