@@ -192,6 +192,7 @@ E) if doBaseStuff in Base were marked throws Exception,
    then doBaseStuff in Sub can be marked throws IOException without causing errors
 
 ----------------------------
+Exceptions Q1
 Given
   void doStuff() throws IOException {};
   void doStuff2() throws FileNotFoundException {};
@@ -214,6 +215,7 @@ D) catch (IOException e)
 E) finally
 
 ----------------------------
+Exceptions Q2
 Given
   void doStuff() throws SQLException {};
   void doStuff2() throws FileNotFoundException {};
@@ -235,6 +237,7 @@ D) throws FileNotFoundException, SQLException
 E) nothing is needed, compilation succeeds as is
 
 ----------------------------
+Exceptions Q3
 Given:
 class AC1 implements AutoCloseable {
   @Override
@@ -270,6 +273,7 @@ D) Closing AC2
 E) Closing AC1
 
 ----------------------------
+Exceptions Q4
 Given:
   try (
     var fr = new FileReader("main.txt"); // line n1
@@ -293,6 +297,7 @@ E) If main.txt is readable, its contents are shown
    but if not, the program exits with an unhandled exception
 
 ----------------------------
+Exceptions Q5
 Given:
   var fr = new FileReader("main.txt");
   try (
@@ -312,6 +317,7 @@ C) var fr2 = fr;
 D) This cannot be achieved with change restricted to line n1
 
 ----------------------------
+Exceptions Q6
 Given
 class AC3 implements AutoCloseable {
   @Override
@@ -344,6 +350,7 @@ D) Closing
 E) No output, SQLException halts the program
 
 ----------------------------
+Exceptions Q7
 Given
 class AC4 implements AutoCloseable {
   @Override

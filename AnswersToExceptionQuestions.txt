@@ -1,0 +1,41 @@
+Q1:
+Answer D
+Multi-catch catches sibling exceptions, and is not permitted
+for exceptions that have a parent/child relationship.
+
+Q2:
+Answer D
+Where multi-catch is used and the caught exception is rethrown, the
+compiler knows the specific types of exception that might be caught,
+and only those need to be handled.
+
+Q3
+Answer D
+Resources in a try-with-resources structure are closed in the opposite order from their
+declaration. This might differ from their creation if a final resource constructed outside
+the try parentheses is involved.
+
+Q4
+Answer C
+resource variables try-with-resources are implicitly final variables (they may
+be declared explicitly final, but it makes no difference). So, the reassignment
+at line n3 is prohibited.
+
+Q5
+Answer C
+The *variable* used to refer to the resource must be final or effectively final.
+Since the code does not give the option to remove the fr = null reassignment,
+a different variable must be used for the resource. It is sufficient to take a
+copy of that variable's value into a new variable that does not change.
+
+Q6
+Both resources have their close methods, even though they both throw exceptions
+As a result, two "Closing" messages are printed. Following that, an SQLException
+is thrown, that exception has another SQLException embedded in it as a suppressed
+exception.
+
+Q7
+Both resources have their close methods called, even though they both throw exceptions
+As a result, two "Closing" messages are printed. Following that, an SQLException
+is thrown, that exception has another SQLException embedded in it as a suppressed
+exception.
