@@ -74,6 +74,7 @@ void doStuff() {
    } catch (var ex) {
    }
 }
+
 ----------------------------
 Which print "true"
 A) String s = "Hello";
@@ -98,10 +99,53 @@ D) List<String> ls = List.of("Fred", "Jim");
 E) LocalDate ld = LocalDate.of(2021, 3, 29);
    LocalDate ld2 = LocalDate.of(2021, 3, 29);
    sout(ld.equals(ld2));
-   
 
+----------------------------
+What is the result:
 
+int i = 10;
+System.out.println(i++ + --i);
+System.out.println(i);   
 
+A)
+20
+10
+
+B)
+19
+10
+
+C)
+20
+9
+
+D)
+19
+9
+
+----------------------------
+What is the result:
+
+int [] ia1 = {1,2,3};
+int [] ia2 = {-1,-2,-3};
+int [] ia = ia2;
+System.out.println(ia[(ia=ia1)[0]]);
+
+A) Exception at runtime
+B) 1
+C) 2
+D) -1
+E) -2
+
+----------------------------
+What is the scope of a private element?
+A) Only visible in the declaring class
+B) Visible in any class in the same package
+C) Visible in the declaring class and its subclasses  
+D) Visible in the package and in subclasses
+E) None of the above
+-- answer "anywhere inside the enclosing TOP LEVEL curly braces
+-- surrounding the declaration.
 
 
 
