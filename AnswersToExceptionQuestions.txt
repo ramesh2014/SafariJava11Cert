@@ -35,7 +35,9 @@ is thrown, that exception has another SQLException embedded in it as a suppresse
 exception.
 
 Q7
-Both resources have their close methods called, even though they both throw exceptions
-As a result, two "Closing" messages are printed. Following that, an SQLException
-is thrown, that exception has another SQLException embedded in it as a suppressed
-exception.
+Answer B, D
+If a try-with-resources block throws an exception, that is the primary exception
+reported to a caller. In this case, there will be two exceptions added to that
+primary as suppressed exceptions. All the resources have their close methods
+called, even if there are exceptions that arise from some or all of those close
+methods.
