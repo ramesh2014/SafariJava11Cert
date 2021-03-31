@@ -375,5 +375,39 @@ D) close methods of resources "one" and "two" are called
 E) close methods of resources "one" and "two" are not both called
 
 ----------------------------
+Given:
+interface StudentCriterion {
+    boolean test(Student s);
+}
+
+and:
+class Student {
+    public int getGpa() { return 0; }
+    public List<String> getCourses() { return null; }
+}
+
+    Which are legal (individually):
+    A) StudentCriterion sc = Student s -> { return s.getGpa() > 3;};
+    B) StudentCriterion sc = s -> { s.getGpa() > 3 };
+    C) Object sc = s -> {return s.getGpa() > 3;};
+    D) StudentCriterion sc = (s) -> s.getGpa() > 3;
+    E) StudentCriterion sc = s -> s.getCourses().size();
+
+----------------------------
+Which are legal individually:
+A) Function<String, String> fss = s -> { System.out.println(s); };
+B) Consumer<String> cs = s -> { System.out.println(s); };
+C) Supplier<String> ss = (s1, s2) -> s1 + s2;
+D) BiPredicate<String> bps = (String s) -> { return s.length() > 0; };
+E) ToIntFunction<String> tofs = s -> s.length();
+
+----------------------------
+Which are legal individually:
+
+A) Comparator<String> cs = s1, s2 -> s2.compareTo(s1);
+B) Comparator<String> cs = (s1, s2) -> s2.compareTo(s1);
+C) Comparator<String> cs = (var s1, String s2) -> s2.compareTo(s1);
+D) Comparator<String> cs = (var s1, s2) -> s2.compareTo(s1);
+E) Comparator<String> cs = (String s1, String s2) -> s2.compareTo(s1);
 
 
