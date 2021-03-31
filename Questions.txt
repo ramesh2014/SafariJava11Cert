@@ -450,5 +450,18 @@ D) @interface Annot {
 E) @Retention(RetentionPolicy.CLASS)
    @interface Annot {}
 
+----------------------------
+What does a module-info identify in an export directive?
+  A) classes
+  B) interfaces
+  C) a service
+  D) a package
+  E) methods
 
-
+----------------------------
+  What does a module-info identify in a requires directive?
+  A) classes
+  B) interfaces
+  C) a service
+  D) a package
+  E) a module
